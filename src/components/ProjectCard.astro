@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import type { Project } from "../types/config";
+import {marked} from "marked"
+
+type Props = Project;
+
+const { title, description, image, year, url } = Astro.props;
+
+const htmlDescription = marked.parse(description)
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="p-5 rounded-xl border border-white/[0.07] flex flex-col sm:flex-row gap-5 group-hover:opacity-50 hover:!opacity-100 hover:bg-white/[0.03] hover:border-white/[0.13] transition-all"
+>
+  <div class="h-full bg-[#1a1a1a] rounded-lg aspect-video sm:h-[150px] flex-shrink-0">
+    <Image
+      width={1920}
+      height={1080}
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover rounded-lg aspect-video"
+    />
+  </div>
+  <div>
+    <div class="flex items-center gap-1 mb-2">
+      <h2 class="font-medium">{title}</h2>
+      <span class="opacity-60">· {year}</span>
+    </div>
+    <div class="opacity-60">
+      <Fragment set:html={htmlDescription} />
+    </div>
+  </div>
+</a>

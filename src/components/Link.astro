@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  text: string;
+  href: string;
+  external?: boolean;
+  noAnchor?: boolean;
+}
+
+const { text, href, external, noAnchor } = Astro.props;
+---
+
+{
+  !noAnchor ? (
+    <a
+      href={href}
+      target={external ? "_blank" : "_self"}
+      class="flex items-center gap-2 opacity-50 group-hover:opacity-20 hover:!opacity-100 transition-opacity"
+    >
+      <div class="rotate-45 flex-shrink-0">
+        <Icon name="mdi:arrow-up" width={15} height={15} />
+      </div>
+      <span class="text-sm font-medium">{text}</span>
+    </a>
+  ) : (
+    <div class="flex items-center gap-2 opacity-50 group-hover:opacity-20 hover:!opacity-100 transition-opacity">
+      <div class="rotate-45 flex-shrink-0">
+        <Icon name="mdi:arrow-up" width={15} height={15} />
+      </div>
+      <span class="text-sm font-medium">{text}</span>
+    </div>
+  )
+}
