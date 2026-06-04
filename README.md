@@ -145,6 +145,9 @@ GET /api/messages
 * Multi-model LLM support
 * Prompt customization
 
+* Try it out here:
+* https://cold-outreach-generator.vercel.app/
+
 ## Author
 
 **Vishal Thangakumar**
