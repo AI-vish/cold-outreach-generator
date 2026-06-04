@@ -41,7 +41,8 @@ User Input → React Frontend → Express API → Gemini API → MongoDB Atlas �
 
 ## Screenshots
 
-(Add screenshots here)
+<img width="960" height="450" alt="image" src="https://github.com/user-attachments/assets/65bb4b73-42d1-4eae-a740-e560c0507078" />
+
 
 ## Installation
 
