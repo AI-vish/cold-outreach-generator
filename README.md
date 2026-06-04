@@ -12,7 +12,8 @@ An AI-powered SaaS web application that generates personalized cold outreach mes
 * RESTful Node.js/Express backend
 * Cloud deployment using Vercel and Render
 * Production-ready environment configuration
-
+##Link:
+* https://cold-outreach-generator.vercel.app/
 ## Tech Stack
 
 ### Frontend
@@ -144,9 +145,6 @@ GET /api/messages
 * Message analytics
 * Multi-model LLM support
 * Prompt customization
-
-* Try it out here:
-* https://cold-outreach-generator.vercel.app/
 
 ## Author
 
